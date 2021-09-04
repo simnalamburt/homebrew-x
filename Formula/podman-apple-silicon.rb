@@ -1,13 +1,13 @@
 class PodmanAppleSilicon < Formula
   desc "Tool for managing OCI containers and pods"
   homepage "https://podman.io/"
-  url "https://github.com/simnalamburt/podman.git", using: :git, revision: "5e4633cb9b0c6c45c710838ccdcbd8514f81c0a1"
-  version "3.3.1-patched.1"
+  url "https://github.com/simnalamburt/podman.git", using: :git, revision: "4633f7fab1ef7388945fde19fc9a78e2027d209c"
+  version "3.3.1-patched.2"
   license "Apache-2.0"
 
   bottle do
-    root_url "https://github.com/simnalamburt/homebrew-x/releases/download/podman-apple-silicon-3.3.1-patched.1"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "832d9984685d072faa9e54904ee770bcd166f0f1caf8e56206e89bbc0848e21f"
+    root_url "https://github.com/simnalamburt/homebrew-x/releases/download/podman-apple-silicon-3.3.1-patched.2"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "364c41f2d4d4db325b894d450725c35ce4fc4c759fcb8709fea9b0d2e50e3f09"
   end
 
   depends_on "go" => :build
