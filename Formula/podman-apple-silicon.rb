@@ -1,21 +1,21 @@
-class Podman < Formula
+class PodmanAppleSilicon < Formula
   desc "Tool for managing OCI containers and pods"
   homepage "https://podman.io/"
-  url "https://github.com/containers/podman/archive/v3.3.1.tar.gz"
-  sha256 "6e3c57f5fd4199bc7603effb8c34268ee7f65fcd30c7b0d4778396b69388ae1f"
+  url "https://github.com/simnalamburt/podman.git", using: :git, revision: "c609ca200041231348a2f5958b59bc3bcd7280ff"
+  version "3.3.1-patched.0"
   license "Apache-2.0"
-  head "https://github.com/containers/podman.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "a4f84427f1f207d67376b51cd9ca9c0a07b1f20e2bc82b7d6d1ae0beadc4d46f"
-    sha256 cellar: :any_skip_relocation, big_sur:       "08252d0ef5eaa0989f1d23dcb7bbc95191dd8f0239acccab48bd1b2bd653a40b"
-    sha256 cellar: :any_skip_relocation, catalina:      "a55cf51bd3b34b60c9acb8a5da5a635a417cbfbf5d9486cfa62e9e0ac0d7cf61"
-    sha256 cellar: :any_skip_relocation, mojave:        "cf84801df11145814e68d066ef971c34e8c18c9791a7ea9f15230ccbabc6a5ae"
+    root_url "https://github.com/simnalamburt/homebrew-x/releases/download/podman-apple-silicon-3.3.1-patched.0"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "7026a25254469ccd174f6f1eb4a93b81e3b1f4653b39801b97f0247eb0bfdc1b"
   end
 
   depends_on "go" => :build
   depends_on "go-md2man" => :build
   depends_on "qemu" if Hardware::CPU.intel?
+  depends_on "simnalamburt/x/qemu-hvf" if Hardware::CPU.arm?
+
+  conflicts_with "podman", because: "podman also ships a podman binary, but without apple silicon patch"
 
   resource "gvproxy" do
     url "https://github.com/containers/gvisor-tap-vsock/archive/v0.1.0.tar.gz"
