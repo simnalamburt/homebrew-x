@@ -4,7 +4,6 @@ class QemuHvf < Formula
   url "https://github.com/simnalamburt/qemu.git", using: :git, revision: "8e52fc910d8db4711c0bcd9570d5696f00dcb4a6"
   version "6.1.0-patched.0"
   license "GPL-2.0-only"
-  conflicts_with "qemu", because: "qemu also ships a qemu binary, but without hvf patch"
 
   bottle do
     root_url "https://github.com/simnalamburt/homebrew-x/releases/download/qemu-hvf-6.1.0-patched.0"
@@ -33,6 +32,8 @@ class QemuHvf < Formula
   on_linux do
     depends_on "gcc"
   end
+
+  conflicts_with "qemu", because: "qemu also ships a qemu binary, but without hvf patch"
 
   fails_with gcc: "5"
 
