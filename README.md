@@ -1,11 +1,15 @@
-# Simnalamburt X
+My macOS packages
+========
+```bash
+brew install simnalamburt/x/<formula>
+```
 
-## How do I install these formulae?
+&nbsp;
 
-`brew install simnalamburt/x/<formula>`
+--------
+*homebrew-x* is primarily distributed under the terms of both the [MIT license]
+and the [Apache License (Version 2.0)]. See [COPYRIGHT] for details.
 
-Or `brew tap simnalamburt/x` and then `brew install <formula>`.
-
-## Documentation
-
-`brew help`, `man brew` or check [Homebrew's documentation](https://docs.brew.sh).
+[MIT license]: LICENSE-MIT
+[Apache License (Version 2.0)]: LICENSE-APACHE
+[COPYRIGHT]: COPYRIGHT
