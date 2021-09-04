@@ -1,7 +1,7 @@
 My macOS packages
 ========
 ```bash
-brew install simnalamburt/x/<formula>
+brew install simnalamburt/x/qemu-hvf
 ```
 
 &nbsp;
