@@ -1,17 +1,15 @@
-class Qemu < Formula
+class QemuHvf < Formula
   desc "Emulator for x86 and PowerPC"
   homepage "https://www.qemu.org/"
-  url "https://download.qemu.org/qemu-6.1.0.tar.xz"
-  sha256 "eebc089db3414bbeedf1e464beda0a7515aad30f73261abc246c9b27503a3c96"
+  url "https://github.com/simnalamburt/qemu.git", using: :git, revision: "8e52fc910d8db4711c0bcd9570d5696f00dcb4a6"
+  version "6.1.0-patched.0"
   license "GPL-2.0-only"
-  head "https://git.qemu.org/git/qemu.git", branch: "master"
+  conflicts_with "qemu", because: "qemu also ships a qemu binary, but without hvf patch"
 
   bottle do
-    sha256 arm64_big_sur: "09773cd9881a40b27ad2599eb869443c04f9b1bb5cbbf741c2b562c188e8a6b3"
-    sha256 big_sur:       "13387458a7dda4c91fadd9274968f0d496171708fc950d4161a32a4d5c6a2a7c"
-    sha256 catalina:      "aaef3209e70171353a841992ffffb28a73e65a8762041cb23b0363bd3dc4ad07"
-    sha256 mojave:        "b611de8493acf94662ec19df3bea1bec9acad6215baca6d0e485efa32e99dacf"
-    sha256 x86_64_linux:  "0257fe7bf5ad82ff9f2cbc5d6dc111e315db5cb5f84b6d9dd9c3aee29bd777ed"
+    root_url "https://github.com/simnalamburt/homebrew-x/releases/download/qemu-hvf-6.1.0-patched.0"
+    # TODO
+    #sha256 arm64_big_sur: "xxx...xxx"
   end
 
   depends_on "libtool" => :build
@@ -61,6 +59,7 @@ class Qemu < Formula
       --extra-cflags=-DNCURSES_WIDECHAR=1
       --disable-sdl
       --disable-gtk
+      --enable-hvf
     ]
     # Sharing Samba directories in QEMU requires the samba.org smbd which is
     # incompatible with the macOS-provided version. This will lead to
