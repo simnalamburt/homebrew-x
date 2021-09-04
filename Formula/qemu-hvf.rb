@@ -8,8 +8,7 @@ class QemuHvf < Formula
 
   bottle do
     root_url "https://github.com/simnalamburt/homebrew-x/releases/download/qemu-hvf-6.1.0-patched.0"
-    # TODO
-    #sha256 arm64_big_sur: "xxx...xxx"
+    sha256 arm64_big_sur: "499d85a59966e366543ddc4d8a2cb38c11785b07632d2bb959c26ea1d9a6a1d1"
   end
 
   depends_on "libtool" => :build
