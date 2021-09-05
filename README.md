@@ -10,12 +10,14 @@ podman machine init
 podman machine start
 podman run -p 8080:80 docker.io/nginx
 ```
+See https://github.com/simnalamburt/podman for the patch that is used. It's based on the main branch of podman
 
 ### 2. qemu-hvf
 qemu with Hypervisor.framework patch applied
 ```bash
 brew install simnalamburt/x/qemu-hvf
 ```
+See https://github.com/simnalamburt/qemu/tree/hvf for the patch that is used. It's based on the 6.1.0 version of qemu
 
 &nbsp;
 
