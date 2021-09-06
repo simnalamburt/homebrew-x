@@ -1,3 +1,20 @@
+# podman patched to work with Apple Silicon. Install it like this:
+#
+#     brew install simnalamburt/x/podman-apple-silicon
+#
+# You can run the linux VM for the podman container like this:
+#
+#     podman machine init       # Create a VM
+#     podman machine start      # Start a VM
+#     podman run -p 8080:80 docker.io/nginx   # Run a container
+#
+# It's based on my fork of development version of podman, and
+# Alex Graf's Hypervisor.framework patch applied to the QEMU v6.1.0.
+# See following links for the source codes of forks
+#
+# - https://github.com/simnalamburt/podman
+# - https://github.com/simnalamburt/qemu/tree/hvf
+
 class PodmanAppleSilicon < Formula
   desc "Tool for managing OCI containers and pods"
   homepage "https://podman.io/"
