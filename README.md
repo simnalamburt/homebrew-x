@@ -19,6 +19,16 @@ brew install simnalamburt/x/qemu-hvf
 ```
 See https://github.com/simnalamburt/qemu/tree/hvf for the patch that is used. It's based on the 6.1.0 version of qemu
 
+### 3. multiarch support
+M1 mac users usually want to build and/or run amd64 images.
+For this, you need to install some more packages into the linux.
+By default, the podman machine os is fedora-coreos, which uses rpm-ostree as package manager
+```
+podman machine ssh
+[core@localhost ~]$ sudo rpm-ostree install qemu-user-static
+[core@localhost ~]$ sudo systemctl reboot
+```
+
 &nbsp;
 
 --------
