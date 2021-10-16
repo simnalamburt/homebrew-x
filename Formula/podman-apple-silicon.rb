@@ -47,13 +47,11 @@ class PodmanAppleSilicon < Formula
     end
 
     system "make", "podman-remote-#{os}"
-    on_macos do
+    if OS.mac?
       bin.install "bin/#{os}/podman" => "podman-remote"
       bin.install_symlink bin/"podman-remote" => "podman"
     end
-    on_linux do
-      bin.install "bin/podman-remote"
-    end
+    bin.install "bin/podman-remote" if OS.linux?
 
     resource("gvproxy").stage do
       system "make"
