@@ -1,7 +1,13 @@
 My macOS packages
 ========
-### 1. podman-apple-silicon
-podman patched to work with Apple Silicon
+### 1. totp
+Simple TOTP CLI, powered by keychain of macOS. See [simnalamburt/macos-totp-cli](https://github.com/simnalamburt/macos-totp-cli) for the further details.
+```bash
+brew install simnalamburt/x/totp
+```
+
+### 2. podman-apple-silicon
+podman patched to work with Apple Silicon.
 ```bash
 brew install simnalamburt/x/podman-apple-silicon
 
@@ -12,8 +18,8 @@ podman run -p 8080:80 docker.io/nginx
 ```
 See https://github.com/simnalamburt/podman for the patch that is used. It's based on the main branch of podman
 
-### 2. qemu-hvf
-qemu with Hypervisor.framework patch applied
+### 3. qemu-hvf
+qemu with [Hypervisor.framework](https://developer.apple.com/documentation/hypervisor) patch applied.
 ```bash
 brew install simnalamburt/x/qemu-hvf
 ```
