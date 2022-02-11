@@ -1,13 +1,19 @@
 My macOS packages
 ========
-### 1. totp
+### totp
 Simple TOTP CLI, powered by keychain of macOS. See [simnalamburt/macos-totp-cli](https://github.com/simnalamburt/macos-totp-cli) for the further details.
 ```bash
 brew install simnalamburt/x/totp
 ```
 
-### 2. podman-apple-silicon
-podman patched to work with Apple Silicon.
+&nbsp;
+
+Archives
+--------
+These packages have outlived their usefulness, but have been preserved for historical reasons.
+
+### podman-apple-silicon
+Podman patched to work with Apple Silicon. You won't need this fork since podman v3.4.0 or later works fine with Apple Silicon. See [simnalamburt/podman](https://github.com/simnalamburt/podman) for the source codes.
 ```bash
 brew install simnalamburt/x/podman-apple-silicon
 
@@ -16,14 +22,12 @@ podman machine init
 podman machine start
 podman run -p 8080:80 docker.io/nginx
 ```
-See https://github.com/simnalamburt/podman for the patch that is used. It's based on the main branch of podman
 
-### 3. qemu-hvf
-qemu with [Hypervisor.framework](https://developer.apple.com/documentation/hypervisor) patch applied.
+### qemu-hvf
+qemu with [Hypervisor.framework](https://developer.apple.com/documentation/hypervisor) patch applied. See [simnalamburt/qemu@hvf](https://github.com/simnalamburt/qemu/tree/hvf) for the patch that is used. It's based on the 6.1.0 version of qemu.
 ```bash
 brew install simnalamburt/x/qemu-hvf
 ```
-See https://github.com/simnalamburt/qemu/tree/hvf for the patch that is used. It's based on the 6.1.0 version of qemu
 
 &nbsp;
 
