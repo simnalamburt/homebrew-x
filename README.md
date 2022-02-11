@@ -1,5 +1,11 @@
 My macOS packages
 ========
+### haskell-stack
+haskell-stack patched to work with Apple Silicon.
+```bash
+brew install simnalamburt/x/haskell-stack
+```
+
 ### totp
 Simple TOTP CLI, powered by keychain of macOS. See [simnalamburt/macos-totp-cli](https://github.com/simnalamburt/macos-totp-cli) for the further details.
 ```bash
