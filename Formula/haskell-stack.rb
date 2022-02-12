@@ -14,12 +14,15 @@ class HaskellStack < Formula
 
   depends_on "cabal-install" => :build
   depends_on "ghc" => :build
+  depends_on "llvm@12" if Hardware::CPU.arm?
 
   uses_from_macos "zlib"
 
   def install
     system "cabal", "v2-update"
     system "cabal", "v2-install", *std_cabal_v2_args
+
+    bin.env_script_all_files libexec, PATH: "${PATH}:#{Formula["llvm@12"].opt_bin}" if Hardware::CPU.arm?
   end
 
   test do
