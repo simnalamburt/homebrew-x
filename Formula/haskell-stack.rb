@@ -35,11 +35,13 @@ class HaskellStack < Formula
   end
 
   bottle do
-    #sha256 cellar: :any_skip_relocation, arm64_big_sur: "1febdf95d90161093914f0b130a2e560e3e536316b414ab4d894195f2ffbec61"
-    sha256 cellar: :any_skip_relocation, big_sur:       "5e9185c5fb43ee4aa892bd5e9460fba19874c741df8cb0791af25ec7dab40575"
-    sha256 cellar: :any_skip_relocation, catalina:      "eff4da14356490588c31bbdf4d327605c5209957956d2964eb42e65bb9f687ba"
-    sha256 cellar: :any_skip_relocation, mojave:        "f57fdcf4118acc46b507b6e091f8898f9f1200f5041d20460ac97cc57fe21364"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "1c0e6d39df1e8c28c0ed815df4a2f02a3e302a758fb9dade1aaf3d13212ce5ad"
+    root_url "https://github.com/simnalamburt/homebrew-x/releases/download/haskell-stack-2.7.3"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "ccab992d98a6403da04ce780fbcea33195ef50afccf527d419f16b817f873700"
+    sha256 cellar: :any_skip_relocation, big_sur:        "5e9185c5fb43ee4aa892bd5e9460fba19874c741df8cb0791af25ec7dab40575"
+    sha256 cellar: :any_skip_relocation, catalina:       "eff4da14356490588c31bbdf4d327605c5209957956d2964eb42e65bb9f687ba"
+    sha256 cellar: :any_skip_relocation, mojave:         "f57fdcf4118acc46b507b6e091f8898f9f1200f5041d20460ac97cc57fe21364"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "1c0e6d39df1e8c28c0ed815df4a2f02a3e302a758fb9dade1aaf3d13212ce5ad"
   end
 
   head do
