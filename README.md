@@ -1,7 +1,7 @@
 My macOS packages
 ========
 ### haskell-stack
-haskell-stack patched to work with Apple Silicon. See [Homebrew/homebrew-core#95032](https://github.com/Homebrew/homebrew-core/pull/95032) for the upstream PR.
+haskell-stack patched to work with Apple Silicon. See [Homebrew/homebrew-core#95032](https://github.com/Homebrew/homebrew-core/pull/95032) and [commercialhaskell/stack#5677](https://github.com/commercialhaskell/stack/pull/5677) for the upstream PRs.
 ```bash
 brew install simnalamburt/x/haskell-stack
 ```
