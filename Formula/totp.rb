@@ -4,7 +4,7 @@ class Totp < Formula
   url "https://github.com/simnalamburt/macos-totp-cli/archive/v1.0.0.tar.gz"
   version "1.0.0"
   sha256 "afb947ac9b0cb227a302e81f6faf1f9c8bbadc169bba2445d9104cbb7200eeb2"
-  license "Apache-2.0" # Actually it's (Apache-2.0 OR MIT). Commeting it out due do false-alarm of "brew audit"
+  license "Apache-2.0" # Actually it's (Apache-2.0 OR MIT). Commenting it out due do false-alarm of "brew audit"
 
   bottle do
     root_url "https://github.com/simnalamburt/homebrew-x/releases/download/totp-1.0.0"
