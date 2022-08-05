@@ -8,7 +8,10 @@ class Totp < Formula
 
   bottle do
     root_url "https://github.com/simnalamburt/homebrew-x/releases/download/totp-1.0.0"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "9f95f6e26b5e6f53e24367d78dabf4eed989cb32f965cda4d4334e6845e0f2fe"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "d62520bc01c337a73086af23b77e9c07b8e2babeeea8b6d703d25cf6ee102860"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "9f95f6e26b5e6f53e24367d78dabf4eed989cb32f965cda4d4334e6845e0f2fe"
+    sha256 cellar: :any_skip_relocation, monterey:       "98727705a085dc49bac28adfcf9c165cc3ca92de1a9d766f74612a5d3d8194ad"
   end
 
   depends_on "go" => :build
