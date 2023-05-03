@@ -14,7 +14,6 @@ class ElbLogParser < Formula
   depends_on "rust" => :build
 
   def install
-    system "cargo", "build", *std_cargo_args
-    bin.install "target/release/elb-log-parser"
+    system "cargo", "install", *std_cargo_args
   end
 end
