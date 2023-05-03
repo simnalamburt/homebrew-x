@@ -1,7 +1,13 @@
 My macOS packages
 ========
-### totp
-Simple TOTP CLI, powered by keychain of macOS. See [simnalamburt/macos-totp-cli](https://github.com/simnalamburt/macos-totp-cli) for the further details.
+### [elb-log-parser](https://github.com/simnalamburt/elb-log-parser)
+Simple AWS ELB log parser which parses Classic LB and ALB logs into JSONs.
+```bash
+brew install simnalamburt/x/elb-log-parser
+```
+
+### [totp](https://github.com/simnalamburt/macos-totp-cli)
+Simple TOTP CLI, powered by keychain of macOS.
 ```bash
 brew install simnalamburt/x/totp
 ```
