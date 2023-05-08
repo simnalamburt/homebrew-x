@@ -7,7 +7,7 @@ class ElbLogParser < Formula
 
   bottle do
     root_url "https://github.com/simnalamburt/homebrew-x/releases/download/elb-log-parser-0.1.2"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "2a061150b551859009ec4dec8cd524e62e5ef9374a215f335368165c687295c4"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "e365ed8c043a603f7fe506814aecc13c4829824fcb8ce4fa8b0f8a53b794952f"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "28f9fefda18b462bc8728ac072404aac068b680f3449965bea69c34487379a87"
   end
 
