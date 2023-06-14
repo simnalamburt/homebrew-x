@@ -1,5 +1,11 @@
 My macOS packages
 ========
+### [uniqs](https://github.com/simnalamburt/uniqs)
+uniq(1) alternative with streaming support.
+```bash
+brew install simnalamburt/x/uniqs
+```
+
 ### [elb-log-parser](https://github.com/simnalamburt/elb-log-parser)
 Simple AWS ELB log parser which parses Classic LB and ALB logs into JSONs.
 ```bash
