@@ -1,5 +1,11 @@
 My macOS packages
 ========
+### [jaso](https://github.com/cr0sh/jaso)
+Normalizes filenames to Unicode NFC, faster than convmv(1).
+```bash
+brew install simnalamburt/x/jaso
+```
+
 ### [uniqs](https://github.com/simnalamburt/uniqs)
 uniq(1) alternative with streaming support.
 ```bash
