@@ -1,14 +1,13 @@
 class ElbLogParser < Formula
   desc "Simple AWS ELB log parser which parses Classic LB and ALB logs into JSONs"
   homepage "https://github.com/simnalamburt/elb-log-parser"
-  url "https://github.com/simnalamburt/elb-log-parser/archive/v0.1.2.tar.gz"
-  sha256 "6294869c0f59880226f90753719028a253ba9753e3ec18e13776b82c61dc4eb2"
+  url "https://github.com/simnalamburt/elb-log-parser/archive/v0.2.1.tar.gz"
+  sha256 "8554c5f571e3f6f29514cfabb788481f61b966d6020bbcd78a1d08a3254aaf4c"
   license "AGPL-3.0-or-later"
 
   bottle do
-    root_url "https://github.com/simnalamburt/homebrew-x/releases/download/elb-log-parser-0.1.2"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "e365ed8c043a603f7fe506814aecc13c4829824fcb8ce4fa8b0f8a53b794952f"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "28f9fefda18b462bc8728ac072404aac068b680f3449965bea69c34487379a87"
+    root_url "https://github.com/simnalamburt/homebrew-x/releases/download/elb-log-parser-0.2.1"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "0c25d30543e3a660b96b0ca70f9892241ffbab9639999637b0e7718ff826de89"
   end
 
   depends_on "rust" => :build
