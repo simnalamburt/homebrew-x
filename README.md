@@ -28,7 +28,10 @@ brew install simnalamburt/x/totp
 
 Archives
 --------
+<details>
+<summary>
 These packages have outlived their usefulness, but have been preserved for historical reasons.
+</summary>
 
 ### haskell-stack
 haskell-stack patched to work with Apple Silicon. See [Homebrew/homebrew-core#95032](https://github.com/Homebrew/homebrew-core/pull/95032) and [commercialhaskell/stack#5677](https://github.com/commercialhaskell/stack/pull/5677) for the upstream PRs.
@@ -52,6 +55,8 @@ qemu with [Hypervisor.framework](https://developer.apple.com/documentation/hyper
 ```bash
 brew install simnalamburt/x/qemu-hvf
 ```
+
+</details>
 
 &nbsp;
 
