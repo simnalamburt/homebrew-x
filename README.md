@@ -1,5 +1,11 @@
 My macOS packages
 ========
+### [ra-multiplex](https://github.com/pr2502/ra-multiplex)
+Share one rust-analyzer server instance between multiple LSP clients to save resources.
+```bash
+brew install simnalamburt/x/ra-multiplex
+```
+
 ### [jaso](https://github.com/cr0sh/jaso)
 Normalizes filenames to Unicode NFC, faster than convmv(1).
 ```bash
