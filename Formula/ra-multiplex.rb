@@ -6,7 +6,12 @@ class RaMultiplex < Formula
   license "MIT"
 
   bottle do
+    root_url "https://github.com/simnalamburt/homebrew-x/releases/download/ra-multiplex-0.2.5"
     rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "c9eb188529fd716e91689ca96de34f0940cfe3b19f7fd249f1c55175c9953d43"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "9ad5f9ca6b8a201b2fc0b05dfb93682763f569239aad11593956c5c9d7ced8d9"
+    sha256 cellar: :any_skip_relocation, ventura:       "7fcee4ebd0c5d4bb6c71dfa8269b72ccf95cbc2a9612071b6d45e2c61e7b8d36"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "8c52e9bcda7b35d91976d2bb4e8b0fe8ecc7273a704930bac4de3a22b90b3824"
   end
 
   depends_on "rust" => :build
