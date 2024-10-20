@@ -1,7 +1,7 @@
 class Uniqs < Formula
   desc "`uniq(1)` alternative with streaming support"
   homepage "https://github.com/simnalamburt/uniqs"
-  url "https://github.com/simnalamburt/uniqs/archive/v0.1.0.tar.gz"
+  url "https://github.com/simnalamburt/uniqs/archive/refs/tags/v0.1.0.tar.gz"
   sha256 "cf2e4768d3d558d8f5f26cdd28dd654b8699d9b7718ba7339f3b86ef97683d88"
   license "Apache-2.0" # Actually it's (Apache-2.0 OR MIT) but `brew audit` doesn't support dual licensing
 

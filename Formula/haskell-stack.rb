@@ -4,7 +4,7 @@ class HaskellStack < Formula
   license "BSD-3-Clause"
 
   stable do
-    url "https://github.com/commercialhaskell/stack/archive/v2.7.3.tar.gz"
+    url "https://github.com/commercialhaskell/stack/archive/refs/tags/v2.7.3.tar.gz"
     sha256 "37f4bc0177534782609ec3a67ec413548d3f2cabff7c4c0bc8a92a36e49c6877"
 
     # - Fixed building from source.

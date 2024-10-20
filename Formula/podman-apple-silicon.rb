@@ -35,7 +35,7 @@ class PodmanAppleSilicon < Formula
   conflicts_with "podman", because: "podman also ships a podman binary, but without apple silicon patch"
 
   resource "gvproxy" do
-    url "https://github.com/containers/gvisor-tap-vsock/archive/v0.1.0.tar.gz"
+    url "https://github.com/containers/gvisor-tap-vsock/archive/refs/tags/v0.1.0.tar.gz"
     sha256 "e1e1bec2fc42039da1ae68d382d4560a27c04bbe2aae535837294dd6773e88e0"
   end
 

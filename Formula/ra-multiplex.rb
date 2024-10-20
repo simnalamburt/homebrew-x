@@ -1,7 +1,7 @@
 class RaMultiplex < Formula
-  desc "Share one rust-analyzer server instance between multiple LSP clients to save resources"
+  desc "Share one rust-analyzer instance between multiple LSP clients to save resources"
   homepage "https://github.com/pr2502/ra-multiplex"
-  url "https://github.com/pr2502/ra-multiplex/archive/v0.2.5.tar.gz"
+  url "https://github.com/pr2502/ra-multiplex/archive/refs/tags/v0.2.5.tar.gz"
   sha256 "c24a7e277adce9bbfb86641905d75f166e46459cf4e5b5f3aaa7456b052392dc"
   license "MIT"
 

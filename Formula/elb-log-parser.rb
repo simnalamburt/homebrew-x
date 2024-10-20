@@ -1,7 +1,7 @@
 class ElbLogParser < Formula
   desc "Simple AWS ELB log parser which parses Classic LB and ALB logs into JSONs"
   homepage "https://github.com/simnalamburt/elb-log-parser"
-  url "https://github.com/simnalamburt/elb-log-parser/archive/v0.2.3.tar.gz"
+  url "https://github.com/simnalamburt/elb-log-parser/archive/refs/tags/v0.2.3.tar.gz"
   sha256 "0caf5b3a0d8cdaac72c4147807e34deb68ed76846a96fff962c9ea33c187c4cf"
   license "AGPL-3.0-or-later"
 
