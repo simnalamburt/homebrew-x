@@ -19,4 +19,9 @@ class RaMultiplex < Formula
   def install
     system "cargo", "install", *std_cargo_args
   end
+
+  service do
+    run [opt_bin/"ra-multiplex", "server"]
+    keep_alive true
+  end
 end
