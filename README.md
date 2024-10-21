@@ -7,6 +7,12 @@ brew install simnalamburt/x/ra-multiplex
 brew services start simnalamburt/x/ra-multiplex
 ```
 
+### [input-source](https://github.com/simnalamburt/macos-input-source)
+Tiny input source manager for macOS.
+```bash
+brew install simnalamburt/x/input-source
+```
+
 ### [jaso](https://github.com/cr0sh/jaso)
 Normalizes filenames to Unicode NFC, faster than convmv(1).
 ```bash
