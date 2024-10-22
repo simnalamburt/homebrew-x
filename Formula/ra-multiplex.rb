@@ -14,7 +14,9 @@ class RaMultiplex < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "8c52e9bcda7b35d91976d2bb4e8b0fe8ecc7273a704930bac4de3a22b90b3824"
   end
 
-  depends_on "rust" => :build
+  # They're optional dependencies since many users use rustup.
+  depends_on "rust" => [:build, :optional]
+  depends_on "rust-analyzer" => :optional
 
   def install
     system "cargo", "install", *std_cargo_args
@@ -23,5 +25,10 @@ class RaMultiplex < Formula
   service do
     run [opt_bin/"ra-multiplex", "server"]
     keep_alive true
+    error_log_path var/"log/ra-multiplex.log"
+    log_path var/"log/ra-multiplex.log"
+
+    # Need cargo and rust-analyzer in PATH
+    environment_variables PATH: "#{Dir.home}/.cargo/bin:#{std_service_path_env}"
   end
 end
