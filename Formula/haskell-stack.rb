@@ -57,6 +57,8 @@ class HaskellStack < Formula
     end
   end
 
+  deprecate! date: "2024-10-29", because: "is no longer needed due to official upstream support for Apple Silicon"
+
   depends_on "cabal-install" => :build
   depends_on "ghc" => :build
   # GHC 8.10.7 user manual recommend use LLVM 9 through 12
