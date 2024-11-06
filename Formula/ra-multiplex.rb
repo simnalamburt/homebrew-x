@@ -29,6 +29,6 @@ class RaMultiplex < Formula
     log_path var/"log/ra-multiplex.log"
 
     # Need cargo and rust-analyzer in PATH
-    environment_variables PATH: "#{Dir.home}/.cargo/bin:#{std_service_path_env}"
+    environment_variables PATH: "#{std_service_path_env}:#{Dir.home}/.cargo/bin"
   end
 end
