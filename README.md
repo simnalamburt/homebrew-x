@@ -7,6 +7,9 @@ brew install simnalamburt/x/ra-multiplex
 brew services start simnalamburt/x/ra-multiplex
 ```
 
+> **NOTE**: A PR is in progress to migrate ra-multiplex to homebrew-core. \
+> https://github.com/Homebrew/homebrew-core/pull/210511
+
 ### [input-source](https://github.com/simnalamburt/macos-input-source)
 Tiny input source manager for macOS.
 ```bash
