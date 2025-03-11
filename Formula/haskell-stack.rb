@@ -78,7 +78,7 @@ class HaskellStack < Formula
 
   test do
     system bin/"stack", "new", "test"
-    assert_predicate testpath/"test", :exist?
+    assert_path_exists testpath/"test"
     assert_match "# test", File.read(testpath/"test/README.md")
   end
 end
