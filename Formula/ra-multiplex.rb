@@ -31,4 +31,8 @@ class RaMultiplex < Formula
     # Need cargo and rust-analyzer in PATH
     environment_variables PATH: "#{std_service_path_env}:#{Dir.home}/.cargo/bin"
   end
+
+  test do
+    assert_equal "ra-multiplex #{version}", shell_output("#{bin}/ra-multiplex --version").chomp
+  end
 end
