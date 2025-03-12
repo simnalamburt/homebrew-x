@@ -32,7 +32,59 @@ class RaMultiplex < Formula
     environment_variables PATH: "#{std_service_path_env}:#{Dir.home}/.cargo/bin"
   end
 
+  def rpc(json)
+    "Content-Length: #{json.size}\r\n" \
+      "\r\n" \
+      "#{json}"
+  end
+
   test do
-    assert_equal "ra-multiplex #{version}", shell_output("#{bin}/ra-multiplex --version").chomp
+    input = rpc <<~JSON
+      {
+        "jsonrpc":"2.0",
+        "id":1,
+        "method":"initialize",
+        "params": {
+          "rootUri": null,
+          "initializationOptions": {},
+          "capabilities": {}
+        }
+      }
+    JSON
+
+    input += rpc <<~JSON
+      {
+        "jsonrpc":"2.0",
+        "method":"initialized",
+        "params": {}
+      }
+    JSON
+
+    input += rpc <<~JSON
+      {
+        "jsonrpc":"2.0",
+        "id": 2,
+        "method":"shutdown",
+        "params": null
+      }
+    JSON
+
+    input += rpc <<~JSON
+      {
+        "jsonrpc":"2.0",
+        "method":"exit",
+        "params": {}
+      }
+    JSON
+
+    output = /Content-Length: \d+\r\n\r\n/
+
+    begin
+      pid = spawn bin/"ra-multiplex", "server"
+      assert_match output, pipe_output(bin/"ra-multiplex", input, 0)
+    ensure
+      Process.kill("TERM", pid)
+      Process.wait(pid)
+    end
   end
 end
