@@ -17,7 +17,7 @@ brew install simnalamburt/x/input-source
 ```
 
 ### [jaso](https://github.com/cr0sh/jaso)
-Normalizes filenames to Unicode NFC, faster than convmv(1).
+Normalizes filenames to Unicode NFC and is faster than convmv(1).
 ```bash
 brew install simnalamburt/x/jaso
 ```
@@ -35,7 +35,7 @@ brew install simnalamburt/x/elb-log-parser
 ```
 
 ### [totp](https://github.com/simnalamburt/macos-totp-cli)
-Simple TOTP CLI, powered by keychain of macOS.
+A simple TOTP CLI powered by keychain of macOS.
 ```bash
 brew install simnalamburt/x/totp
 ```
