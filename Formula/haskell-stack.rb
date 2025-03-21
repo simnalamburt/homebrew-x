@@ -57,7 +57,8 @@ class HaskellStack < Formula
     end
   end
 
-  deprecate! date: "2024-10-29", because: "is no longer needed due to official upstream support for Apple Silicon"
+  disable! date: "2025-03-21", because: "is no longer needed due to official upstream support for Apple Silicon", \
+    replacement: "haskell-stack"
 
   depends_on "cabal-install" => :build
   depends_on "ghc" => :build

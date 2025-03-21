@@ -27,7 +27,8 @@ class PodmanAppleSilicon < Formula
     sha256 cellar: :any_skip_relocation, arm64_big_sur: "bf3c16fef936aeda5e0dc3c0c5aecaa2243624c8244eacc6dd91e454c136fa15"
   end
 
-  deprecate! date: "2024-10-29", because: "is no longer needed due to official upstream support for Apple Silicon"
+  disable! date: "2025-03-21", because: "is no longer needed due to official upstream support for Apple Silicon", \
+    replacement: "podman"
 
   depends_on "go" => :build
   depends_on "go-md2man" => :build

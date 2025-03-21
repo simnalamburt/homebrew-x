@@ -10,7 +10,8 @@ class QemuHvf < Formula
     sha256 arm64_big_sur: "499d85a59966e366543ddc4d8a2cb38c11785b07632d2bb959c26ea1d9a6a1d1"
   end
 
-  deprecate! date: "2024-10-29", because: "is no longer needed due to official upstream support for Apple Silicon"
+  disable! date: "2025-03-21", because: "is no longer needed due to official upstream support for Apple Silicon", \
+    replacement: "qemu"
 
   depends_on "libtool" => :build
   depends_on "meson" => :build

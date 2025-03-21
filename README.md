@@ -56,27 +56,42 @@ brew services start ra-multiplex
 
 ### haskell-stack
 haskell-stack patched to work with Apple Silicon. See [Homebrew/homebrew-core#95032](https://github.com/Homebrew/homebrew-core/pull/95032) and [commercialhaskell/stack#5677](https://github.com/commercialhaskell/stack/pull/5677) for the upstream PRs.
+
+This formula has been deprecated since the official version of haskell-stack now supports Apple Silicon.
+
 ```bash
+# Deprecated
 brew install simnalamburt/x/haskell-stack
+
+# Use homebrew/core version instead
+brew install haskell-stack
 ```
 
 ### podman-apple-silicon
-Podman patched to work with Apple Silicon. You won't need this fork since podman v3.4.0 or later works fine with Apple Silicon. See [simnalamburt/podman](https://github.com/simnalamburt/podman) for the source codes.
+Podman v3.3.1, patched to work with Apple Silicon. See [simnalamburt/podman](https://github.com/simnalamburt/podman) for the source codes.
+
+This fork is now deprecated, as the official version of Podman has supported Apple Silicon since v3.4.0.
+
 ```bash
+# Deprecated
 brew install simnalamburt/x/podman-apple-silicon
 
-# Example
-podman machine init
-podman machine start
-podman run -p 8080:80 docker.io/nginx
+# Use homebrew-core version instead
+brew install podman
 ```
 
 ### qemu-hvf
-qemu with [Hypervisor.framework](https://developer.apple.com/documentation/hypervisor) patch applied. See [simnalamburt/qemu@hvf](https://github.com/simnalamburt/qemu/tree/hvf) for the patch that is used. It's based on the 6.1.0 version of qemu.
-```bash
-brew install simnalamburt/x/qemu-hvf
-```
+QEMU v6.1.0 with [Hypervisor.framework](https://developer.apple.com/documentation/hypervisor) patch applied. See [simnalamburt/qemu@hvf](https://github.com/simnalamburt/qemu/tree/hvf) for the patch that is used.
 
+This fork is now deprecated, as the official version of QEMU has added 'hvf' accelerator support for AArch64 guests on Apple Silicon hosts since v6.2.0.
+
+```bash
+# Deprecated
+brew install simnalamburt/x/qemu-hvf
+
+# Use homebrew-core version instead
+brew install qemu
+```
 
 &nbsp;
 
