@@ -14,6 +14,8 @@ class RaMultiplex < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "8c52e9bcda7b35d91976d2bb4e8b0fe8ecc7273a704930bac4de3a22b90b3824"
   end
 
+  deprecate! date: "2025-03-21", because: "is now in homebrew/core", replacement: "ra-multiplex"
+
   # They're optional dependencies since many users use rustup.
   depends_on "rust" => [:build, :optional]
   depends_on "rust-analyzer" => :optional

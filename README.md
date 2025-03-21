@@ -1,14 +1,5 @@
 My macOS packages
 ========
-### [ra-multiplex](https://github.com/pr2502/ra-multiplex)
-Share one rust-analyzer server instance between multiple LSP clients to save resources.
-```bash
-brew install simnalamburt/x/ra-multiplex
-brew services start simnalamburt/x/ra-multiplex
-```
-
-> **NOTE**: A PR is in progress to migrate ra-multiplex to homebrew-core. \
-> https://github.com/Homebrew/homebrew-core/pull/210511
 
 ### [input-source](https://github.com/simnalamburt/macos-input-source)
 Tiny input source manager for macOS.
@@ -44,10 +35,24 @@ brew install simnalamburt/x/totp
 
 Archives
 --------
-<details>
-<summary>
 These packages have outlived their usefulness, but have been preserved for historical reasons.
-</summary>
+
+### [ra-multiplex](https://github.com/pr2502/ra-multiplex)
+Allows sharing a single rust-analyzer server instance among multiple LSP clients to save resources.
+
+This formula has been deprecated since [ra-multiplex has been migrated to homebrew-core][core#210511].
+
+[core#210511]: https://github.com/Homebrew/homebrew-core/pull/210511
+
+```bash
+# Deprecated
+brew install simnalamburt/x/ra-multiplex
+brew services start simnalamburt/x/ra-multiplex
+
+# Use homebrew/core version instead
+brew install ra-multiplex
+brew services start ra-multiplex
+```
 
 ### haskell-stack
 haskell-stack patched to work with Apple Silicon. See [Homebrew/homebrew-core#95032](https://github.com/Homebrew/homebrew-core/pull/95032) and [commercialhaskell/stack#5677](https://github.com/commercialhaskell/stack/pull/5677) for the upstream PRs.
@@ -72,7 +77,6 @@ qemu with [Hypervisor.framework](https://developer.apple.com/documentation/hyper
 brew install simnalamburt/x/qemu-hvf
 ```
 
-</details>
 
 &nbsp;
 
