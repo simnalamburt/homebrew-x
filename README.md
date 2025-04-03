@@ -1,6 +1,12 @@
 My macOS packages
 ========
 
+### [bunv](https://github.com/aklinker1/bunv)
+Corepack for Bun. PoC for implementing version management inside bun itself.
+```bash
+brew install simnalamburt/x/bunv
+```
+
 ### [input-source](https://github.com/simnalamburt/macos-input-source)
 Tiny input source manager for macOS.
 ```bash
