@@ -5,6 +5,14 @@ class Bunv < Formula
   sha256 "9a75ecd5834c8be1d8c783934823460df745ffed359be8057f83d96b42eefd5d"
   license "MIT"
 
+  bottle do
+    root_url "https://github.com/simnalamburt/homebrew-x/releases/download/bunv-0.3.2"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "7bc3ee5a6da8a30e106680aaad5065e23308ff7b49b1f6813834bec125e0c22d"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "143a0a7e7ae2422e6b424a2e718688c698c2d1bbb69404a7db0c9d5e2a191b60"
+    sha256 cellar: :any_skip_relocation, ventura:       "4ed846d14766bf60dc614cda769ff062e215f70d4eb54407943c7fff93698ee2"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "4479e8bf1539562f4f296dc8e2700f71e588bc7c58931f4345e8950b8dd06d96"
+  end
+
   depends_on "zig" => :build
 
   conflicts_with "oven-sh/bun/bun", because: "both install `bun` binaries"
