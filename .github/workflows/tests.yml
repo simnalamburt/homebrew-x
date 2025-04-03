@@ -34,6 +34,9 @@ jobs:
 
       - run: brew test-bot --only-tap-syntax
 
+      # To test bunv's `conflicts_with "oven-sh/bun/bun"`
+      - run: brew tap oven-sh/bun
+
       - run: brew test-bot --only-formulae
         if: github.event_name == 'pull_request'
 
