@@ -5,6 +5,11 @@ class Bunv < Formula
   sha256 "9a75ecd5834c8be1d8c783934823460df745ffed359be8057f83d96b42eefd5d"
   license "MIT"
 
+  livecheck do
+    url "https://github.com/aklinker1/bunv/releases/latest"
+    regex(%r{href=.*?/tag/v?(\d+(?:\.\d+)+)["' >]}i)
+  end
+
   bottle do
     root_url "https://github.com/simnalamburt/homebrew-x/releases/download/bunv-0.3.2"
     sha256 cellar: :any_skip_relocation, arm64_sequoia: "7bc3ee5a6da8a30e106680aaad5065e23308ff7b49b1f6813834bec125e0c22d"
