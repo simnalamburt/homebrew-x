@@ -28,10 +28,7 @@ class Bunv < Formula
   end
 
   # NOTE: https://github.com/aklinker1/bunv/issues/14
-  def caveats
-    <<~EOS
-      You should create bunv's working directory if it doesn't exist:
-        mkdir ~/.bunv
-    EOS
+  def post_install
+    mkdir_p "#{Dir.home}/.bunv"
   end
 end
