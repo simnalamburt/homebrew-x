@@ -1,0 +1,20 @@
+name: Bump Homebrew Formulae
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 3 * * *"
+
+permissions:
+  pull-requests: write
+
+jobs:
+  bump-formula:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: Homebrew/actions/setup-homebrew@master
+      - uses: Homebrew/actions/bump-packages@master
+        with:
+          formulae: bunv
+          fork: false
