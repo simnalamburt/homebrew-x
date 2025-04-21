@@ -4,6 +4,7 @@ class InputSource < Formula
   url "https://github.com/simnalamburt/macos-input-source/archive/refs/tags/v0.1.4.tar.gz"
   sha256 "f90e522d3f6175e50f10bafd6ae44a80624029a46c68628719393f65f87bac07"
   license "Apache-2.0" # Actually it's (Apache-2.0 OR MIT). Commenting it out due to false-alarm of "brew audit"
+  head "https://github.com/simnalamburt/macos-input-source.git", branch: "main"
 
   bottle do
     root_url "https://github.com/simnalamburt/homebrew-x/releases/download/input-source-0.1.4"

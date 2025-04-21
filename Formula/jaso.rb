@@ -4,6 +4,7 @@ class Jaso < Formula
   url "https://github.com/cr0sh/jaso/archive/refs/tags/v1.0.1.tar.gz"
   sha256 "b9b7b2f73c3f3a9c062691f6907c29b44a9753cb3dc165c2f7f835780cf496d7"
   license "Apache-2.0" # Actually it's (Apache-2.0 OR MIT). Commenting it out due to false-alarm of "brew audit"
+  head "https://github.com/cr0sh/jaso.git", branch: "main"
 
   bottle do
     root_url "https://github.com/simnalamburt/homebrew-x/releases/download/jaso-1.0.1"

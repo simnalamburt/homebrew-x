@@ -4,6 +4,7 @@ class RaMultiplex < Formula
   url "https://github.com/pr2502/ra-multiplex/archive/refs/tags/v0.2.5.tar.gz"
   sha256 "c24a7e277adce9bbfb86641905d75f166e46459cf4e5b5f3aaa7456b052392dc"
   license "MIT"
+  head "https://github.com/pr2502/ra-multiplex.git", branch: "main"
 
   bottle do
     root_url "https://github.com/simnalamburt/homebrew-x/releases/download/ra-multiplex-0.2.5"

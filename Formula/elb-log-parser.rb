@@ -4,6 +4,7 @@ class ElbLogParser < Formula
   url "https://github.com/simnalamburt/elb-log-parser/archive/refs/tags/v0.2.6.tar.gz"
   sha256 "33933432ca2a0869dae5185ff5a4e3d9c3a86bd6ac798be321c2f689a2947f8b"
   license "AGPL-3.0-or-later"
+  head "https://github.com/simnalamburt/elb-log-parser.git", branch: "main"
 
   bottle do
     root_url "https://github.com/simnalamburt/homebrew-x/releases/download/elb-log-parser-0.2.6"

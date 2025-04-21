@@ -4,6 +4,7 @@ class Bunv < Formula
   url "https://github.com/aklinker1/bunv/archive/refs/tags/v0.4.0.tar.gz"
   sha256 "9d9fd565dd89ff4996522b1b10614acf09947adb729d3a0a137e1899912bf629"
   license "MIT"
+  head "https://github.com/aklinker1/bunv.git", branch: "main"
 
   livecheck do
     url "https://github.com/aklinker1/bunv/releases/latest"
