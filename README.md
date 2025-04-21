@@ -1,6 +1,12 @@
 My macOS packages
 ========
 
+### [cargo-shear](https://github.com/Boshen/cargo-shear)
+Detect and remove unused dependencies from `Cargo.toml` in Rust projects.
+```bash
+brew install simnalamburt/x/cargo-shear
+```
+
 ### [bunv](https://github.com/aklinker1/bunv)
 Corepack for Bun. PoC for implementing version management inside bun itself.
 ```bash
