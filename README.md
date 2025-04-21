@@ -1,6 +1,15 @@
 My macOS packages
 ========
 
+### [cargo-criterion](https://github.com/bheisler/cargo-criterion)
+cargo-criterion is a Plugin for Cargo which handles much of the heavy lifting
+for analyzing and reporting on [criterion-rs] benchmarks.
+```bash
+brew install simnalamburt/x/cargo-criterion
+```
+
+[criterion-rs]: https://github.com/bheisler/criterion.rs
+
 ### [cargo-shear](https://github.com/Boshen/cargo-shear)
 Detect and remove unused dependencies from `Cargo.toml` in Rust projects.
 ```bash
