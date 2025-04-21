@@ -1,6 +1,12 @@
 My macOS packages
 ========
 
+### [ferron](https://github.com/ferronweb/ferron)
+A fast, memory-safe web server written in Rust.
+```bash
+brew install simnalamburt/x/ferron
+```
+
 ### [cargo-criterion](https://github.com/bheisler/cargo-criterion)
 cargo-criterion is a Plugin for Cargo which handles much of the heavy lifting
 for analyzing and reporting on [criterion-rs] benchmarks.
