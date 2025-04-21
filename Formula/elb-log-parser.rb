@@ -6,6 +6,11 @@ class ElbLogParser < Formula
   license "AGPL-3.0-or-later"
   head "https://github.com/simnalamburt/elb-log-parser.git", branch: "main"
 
+  livecheck do
+    url :stable
+    strategy :github_latest
+  end
+
   bottle do
     root_url "https://github.com/simnalamburt/homebrew-x/releases/download/elb-log-parser-0.2.6"
     sha256 cellar: :any_skip_relocation, arm64_sequoia: "63e412f935ac4371bbc29bd762963973d6db9d394050db0850e25d179a050324"

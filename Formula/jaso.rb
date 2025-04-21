@@ -6,6 +6,11 @@ class Jaso < Formula
   license "Apache-2.0" # Actually it's (Apache-2.0 OR MIT). Commenting it out due to false-alarm of "brew audit"
   head "https://github.com/cr0sh/jaso.git", branch: "main"
 
+  livecheck do
+    url :stable
+    strategy :github_latest
+  end
+
   bottle do
     root_url "https://github.com/simnalamburt/homebrew-x/releases/download/jaso-1.0.1"
     sha256 cellar: :any_skip_relocation, arm64_sequoia: "4dbe05b571860cc90ceb5d9f246f5e736b3bd76472ebe9757dbb00ddf6c316db"

@@ -7,8 +7,8 @@ class Bunv < Formula
   head "https://github.com/aklinker1/bunv.git", branch: "main"
 
   livecheck do
-    url "https://github.com/aklinker1/bunv/releases/latest"
-    regex(%r{href=.*?/tag/v?(\d+(?:\.\d+)+)["' >]}i)
+    url :stable
+    strategy :github_latest
   end
 
   bottle do

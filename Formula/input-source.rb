@@ -6,6 +6,11 @@ class InputSource < Formula
   license "Apache-2.0" # Actually it's (Apache-2.0 OR MIT). Commenting it out due to false-alarm of "brew audit"
   head "https://github.com/simnalamburt/macos-input-source.git", branch: "main"
 
+  livecheck do
+    url :stable
+    strategy :github_latest
+  end
+
   bottle do
     root_url "https://github.com/simnalamburt/homebrew-x/releases/download/input-source-0.1.4"
     sha256 cellar: :any_skip_relocation, arm64_sequoia: "e41bd4726533a2c2e6011b155f463a978e902bb7d8f0adcf286b7a7d74d21c6e"

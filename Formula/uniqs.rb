@@ -6,6 +6,11 @@ class Uniqs < Formula
   license "Apache-2.0" # Actually it's (Apache-2.0 OR MIT) but `brew audit` doesn't support dual licensing
   head "https://github.com/simnalamburt/uniqs.git", branch: "main"
 
+  livecheck do
+    url :stable
+    strategy :github_latest
+  end
+
   bottle do
     root_url "https://github.com/simnalamburt/homebrew-x/releases/download/uniqs-0.1.2"
     sha256 cellar: :any_skip_relocation, arm64_sequoia: "a68b33aa6b5b44f7321ac05f0a38b8e679660d97c5cb93bd895fe08c1e0f8e8c"

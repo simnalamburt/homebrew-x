@@ -6,6 +6,11 @@ class Totp < Formula
   license "Apache-2.0" # Actually it's (Apache-2.0 OR MIT). Commenting it out due to false-alarm of "brew audit"
   head "https://github.com/simnalamburt/macos-totp-cli.git", branch: "main"
 
+  livecheck do
+    url :stable
+    strategy :github_latest
+  end
+
   bottle do
     root_url "https://github.com/simnalamburt/homebrew-x/releases/download/totp-1.1.3"
     sha256 cellar: :any_skip_relocation, arm64_sequoia: "4290ed20ab29c41c4e5fbfd9f2309c6dcd4179155e9b3c77b9d0154d0743b502"
