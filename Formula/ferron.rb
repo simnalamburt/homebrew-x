@@ -14,6 +14,8 @@ class Ferron < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "5f2532316affa2b11909855520bb46cfb4113ee920fec559c1ac6574fbe0db48"
   end
 
+  deprecate! date: "2025-04-24", because: "is now in homebrew/core", replacement: "ferron"
+
   depends_on "rust" => :build
 
   def install

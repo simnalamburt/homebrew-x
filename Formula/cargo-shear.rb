@@ -19,6 +19,8 @@ class CargoShear < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "1e5a8c6d29e924efc3543ebf0aaacd678095114d70005e9c227b5cfc6d59ab6e"
   end
 
+  deprecate! date: "2025-04-24", because: "is now in homebrew/core", replacement: "cargo-shear"
+
   depends_on "rust" => :build
   depends_on "rustup" => :test
 

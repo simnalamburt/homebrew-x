@@ -1,12 +1,6 @@
 My macOS packages
 ========
 
-### [ferron](https://github.com/ferronweb/ferron)
-A fast, memory-safe web server written in Rust.
-```bash
-brew install simnalamburt/x/ferron
-```
-
 ### [cargo-criterion](https://github.com/bheisler/cargo-criterion)
 cargo-criterion is a Plugin for Cargo which handles much of the heavy lifting
 for analyzing and reporting on [criterion-rs] benchmarks.
@@ -15,12 +9,6 @@ brew install simnalamburt/x/cargo-criterion
 ```
 
 [criterion-rs]: https://github.com/bheisler/criterion.rs
-
-### [cargo-shear](https://github.com/Boshen/cargo-shear)
-Detect and remove unused dependencies from `Cargo.toml` in Rust projects.
-```bash
-brew install simnalamburt/x/cargo-shear
-```
 
 ### [bunv](https://github.com/aklinker1/bunv)
 Corepack for Bun. PoC for implementing version management inside bun itself.
@@ -64,12 +52,34 @@ Archives
 --------
 These packages have outlived their usefulness, but have been preserved for historical reasons.
 
+### [ferron](https://github.com/ferronweb/ferron)
+A fast, memory-safe web server written in Rust.
+
+This formula has been deprecated since [ferron has been migrated to homebrew-core][core#220850].
+```bash
+# Deprecated
+brew install simnalamburt/x/ferron
+
+# Use homebrew/core version instead
+brew install ferron
+```
+
+### [cargo-shear](https://github.com/Boshen/cargo-shear)
+Detect and remove unused dependencies from `Cargo.toml` in Rust projects.
+
+This formula has been deprecated since [cargo-shear has been migrated to homebrew-core][core#220832].
+```bash
+# Deprecated
+brew install simnalamburt/x/cargo-shear
+
+# Use homebrew/core version instead
+brew install cargo-shear
+```
+
 ### [ra-multiplex](https://github.com/pr2502/ra-multiplex)
 Allows sharing a single rust-analyzer server instance among multiple LSP clients to save resources.
 
 This formula has been deprecated since [ra-multiplex has been migrated to homebrew-core][core#210511].
-
-[core#210511]: https://github.com/Homebrew/homebrew-core/pull/210511
 
 ```bash
 # Deprecated
@@ -82,7 +92,7 @@ brew services start ra-multiplex
 ```
 
 ### haskell-stack
-haskell-stack patched to work with Apple Silicon. See [Homebrew/homebrew-core#95032](https://github.com/Homebrew/homebrew-core/pull/95032) and [commercialhaskell/stack#5677](https://github.com/commercialhaskell/stack/pull/5677) for the upstream PRs.
+haskell-stack patched to work with Apple Silicon. See [Homebrew/homebrew-core#95032][core#95032] and [commercialhaskell/stack#5677](https://github.com/commercialhaskell/stack/pull/5677) for the upstream PRs.
 
 This formula has been deprecated since the official version of haskell-stack now supports Apple Silicon.
 
@@ -125,6 +135,11 @@ brew install qemu
 --------
 *homebrew-x* is primarily distributed under the terms of both the [MIT license]
 and the [Apache License (Version 2.0)]. See [COPYRIGHT] for details.
+
+[core#220850]: https://github.com/Homebrew/homebrew-core/pull/220850
+[core#220832]: https://github.com/Homebrew/homebrew-core/pull/220832
+[core#210511]: https://github.com/Homebrew/homebrew-core/pull/210511
+[core#95032]: https://github.com/Homebrew/homebrew-core/pull/95032
 
 [MIT license]: LICENSE-MIT
 [Apache License (Version 2.0)]: LICENSE-APACHE
