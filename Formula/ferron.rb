@@ -43,6 +43,7 @@ class Ferron < Formula
 
     begin
       pid = spawn bin/"ferron", "-c", testpath/"ferron.yaml"
+      sleep 3
       assert_match expected_output, shell_output("curl -s 127.0.0.1:#{port}")
     ensure
       Process.kill("TERM", pid)
