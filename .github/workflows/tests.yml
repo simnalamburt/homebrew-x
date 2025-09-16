@@ -19,6 +19,7 @@ jobs:
           - macos-13 # x86-64
           - macos-14 # arm64
           - macos-15 # arm64
+          - macos-26 # arm64
     runs-on: ${{ matrix.os }}
     steps:
       - name: Set up Homebrew
