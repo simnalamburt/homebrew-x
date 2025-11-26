@@ -19,7 +19,7 @@ class Bunv < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "960650e4e04633db4033ffd59cba7c3eb56846a1d7d33f89264422670eaedecc"
   end
 
-  depends_on "zig" => :build
+  depends_on "zig@0.14" => :build
 
   conflicts_with "oven-sh/bun/bun", because: "both install `bun` binaries"
 
