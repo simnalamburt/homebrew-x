@@ -11,6 +11,14 @@ class Bunv < Formula
     strategy :github_latest
   end
 
+  bottle do
+    root_url "https://github.com/simnalamburt/homebrew-x/releases/download/bunv-0.5.2"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "4e2a890488b688c01ba4cb21bc687039ddcf4395e6098ace97ff9c8463fe4544"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "7200ec12a2114aafaa5ff98cd4bea89068ae17a3647a27d3cfdda3574f0b605c"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "fc12055f2c89aafcca9695bb349cd52e31e01879cac73665164fa97d6bd3793c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "a16d13fecea2a1d24e541f75bc224eb24bb0f9153b7d8c14f7c9a32fb029c796"
+  end
+
   depends_on "zig@0.15" => :build
 
   conflicts_with "oven-sh/bun/bun", because: "both install `bun` binaries"
