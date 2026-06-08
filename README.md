@@ -1,6 +1,12 @@
 My macOS packages
 ========
 
+### [gitstatus](https://github.com/simnalamburt/gitstatus)
+Git status daemon used by shell prompts.
+```bash
+brew install simnalamburt/x/gitstatus
+```
+
 ### [cargo-criterion](https://github.com/bheisler/cargo-criterion)
 cargo-criterion is a Plugin for Cargo which handles much of the heavy lifting
 for analyzing and reporting on [criterion-rs] benchmarks.
