@@ -2,7 +2,9 @@ My macOS packages
 ========
 
 ### [gitstatus](https://github.com/simnalamburt/gitstatus)
-Git status daemon used by shell prompts.
+Patched version of gitstatusd with git reftable support. See
+[romkatv/gitstatus#455](https://github.com/romkatv/gitstatus/issues/455) for the
+context of this patch.
 ```bash
 brew install simnalamburt/x/gitstatus
 export GITSTATUS_DAEMON=/opt/homebrew/bin/gitstatusd
