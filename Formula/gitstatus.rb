@@ -54,6 +54,14 @@ class Gitstatus < Formula
     pkgshare.install "gitstatus.prompt.sh", "gitstatus.prompt.zsh"
   end
 
+  def caveats
+    <<~EOS
+      Add this to your shell startup file, such as ~/.zshrc or ~/.bashrc:
+
+        export GITSTATUS_DAEMON=#{HOMEBREW_PREFIX}/bin/gitstatusd
+    EOS
+  end
+
   test do
     assert_match version.to_s.split("-").first, shell_output("#{bin}/gitstatusd --version")
 

@@ -5,6 +5,7 @@ My macOS packages
 Git status daemon used by shell prompts.
 ```bash
 brew install simnalamburt/x/gitstatus
+export GITSTATUS_DAEMON=/opt/homebrew/bin/gitstatusd
 ```
 
 ### [cargo-criterion](https://github.com/bheisler/cargo-criterion)
