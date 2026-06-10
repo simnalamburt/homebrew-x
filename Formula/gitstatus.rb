@@ -1,19 +1,11 @@
 class Gitstatus < Formula
   desc "Status daemon used by shell prompts"
   homepage "https://github.com/simnalamburt/gitstatus"
-  url "https://github.com/simnalamburt/gitstatus/archive/fbca4a5a589b991f9cc4b24306d270558f56812d.tar.gz"
-  version "1.5.5-fbca4a5"
-  sha256 "f17a20ddb28166c7760cfccc73ab19fd20eb9542dbfed3c3eb647588f8496d70"
+  url "https://github.com/simnalamburt/gitstatus/archive/2f6cb0e7e01c01bf564fe51c1c6c0316ec407f5f.tar.gz"
+  version "1.5.5+simnalamburt.10.g2f6cb0e"
+  sha256 "69202e26272262a04e586636bbf6fe15da5c43aad2af8b0edb70aaaabbb5fcf9"
   license "GPL-3.0-or-later"
   head "https://github.com/simnalamburt/gitstatus.git", branch: "master"
-
-  bottle do
-    root_url "https://github.com/simnalamburt/homebrew-x/releases/download/gitstatus-1.5.5-fbca4a5"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "e2d50fdf276ee61e53a9dd912eceb431b5dfdbbeaf38a5f662d343963efa7429"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "f242643d5b821baf551d217f05572c23c3acff3cf16462add21fbcd7f021ec5c"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "612a7c9ee52bd3b4f1bd26e49c09b9a8d724646575887f6806d2392a5fdb2495"
-    sha256 cellar: :any,                 x86_64_linux:  "47c37b3aabf65b42264febc8f23a7c99597902bd99ba15320130e6765f446e25"
-  end
 
   depends_on "cmake" => :build
   depends_on "libiconv" => :build if OS.mac?
@@ -63,7 +55,7 @@ class Gitstatus < Formula
   end
 
   test do
-    assert_match version.to_s.split("-").first, shell_output("#{bin}/gitstatusd --version")
+    assert_match version.to_s.split("+").first, shell_output("#{bin}/gitstatusd --version")
 
     system "git", "init", "--initial-branch=main", testpath/"repo"
     system "git", "-C", testpath/"repo", "config", "user.name", "Your Name"
