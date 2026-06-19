@@ -7,6 +7,15 @@ class Gitstatus < Formula
   license "GPL-3.0-or-later"
   head "https://github.com/simnalamburt/gitstatus.git", branch: "master"
 
+  bottle do
+    root_url "https://github.com/simnalamburt/homebrew-x/releases/download/gitstatus-1.5.5+simnalamburt.11.g46f8d80"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "2ef0af5aa7f884fd9cf666c3003b7aff3564d1b179058eba0fd844a0c11b6aa3"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "ba8f5683b0d769576e9a3c0024bad13d67a96352ea60ca955b0a521c99b9da96"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "14d8ecfd1b726ba9785efb4149d70532ff24d705a9bc08a16da61b14fcf5192d"
+    sha256 cellar: :any,                 arm64_linux:   "19d70dd8a5b0ce1e73980d3bbfacda70d609222fb54c55b92b8b5a9da81fecc4"
+    sha256 cellar: :any,                 x86_64_linux:  "fa11a0f83be168756f9deab68177a8dde7b1cf45874e6f270c242bffff8dae34"
+  end
+
   depends_on "cmake" => :build
   depends_on "libiconv" => :build if OS.mac?
 
