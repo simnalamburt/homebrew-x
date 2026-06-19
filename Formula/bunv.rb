@@ -21,7 +21,7 @@ class Bunv < Formula
 
   depends_on "zig@0.15" => :build
 
-  conflicts_with "oven-sh/bun/bun", because: "both install `bun` binaries"
+  conflicts_with "bun", because: "both install `bun` binaries"
 
   def install
     system "zig", "build", *std_zig_args
