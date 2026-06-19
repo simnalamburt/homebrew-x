@@ -15,14 +15,23 @@ jobs:
     strategy:
       matrix:
         os:
-          - ubuntu-26.04
-          - ubuntu-26.04-arm
           - macos-14 # arm64
           - macos-15 # arm64
           - macos-15-intel # amd64
           - macos-26 # arm64
           - macos-26-intel # amd64
+        include:
+          - os: ubuntu-26.04
+            container: ghcr.io/homebrew/brew:main
+          - os: ubuntu-26.04-arm
+            container: ghcr.io/homebrew/brew:main
     runs-on: ${{ matrix.os }}
+    container: ${{ matrix.container }}
+    permissions:
+      actions: read
+      checks: read
+      contents: read
+      pull-requests: read
     steps:
       - name: Set up Homebrew
         id: set-up-homebrew
@@ -34,19 +43,6 @@ jobs:
           path: ${{ steps.set-up-homebrew.outputs.gems-path }}
           key: ${{ matrix.os }}-rubygems-${{ steps.set-up-homebrew.outputs.gems-hash }}
           restore-keys: ${{ matrix.os }}-rubygems-
-
-      # Required by homebrew
-      #
-      # References:
-      #   https://github.com/Homebrew/brew/pull/22370
-      #   https://github.com/Homebrew/brew/blob/5472a6bc/Library/Homebrew/extend/os/linux/sandbox.rb#L40-L62
-      - if: runner.os == 'Linux'
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y bubblewrap
-          sudo sysctl -w kernel.unprivileged_userns_clone=1
-          sudo sysctl -w user.max_user_namespaces=28633
-          sudo sysctl -w kernel.apparmor_restrict_unprivileged_userns=0
 
       - run: brew test-bot --only-cleanup-before
 

@@ -10,7 +10,10 @@ jobs:
     if: contains(github.event.pull_request.labels.*.name, 'pr-pull')
     runs-on: ubuntu-26.04-arm
     permissions:
+      actions: read
+      checks: read
       contents: write
+      issues: read
       pull-requests: write
     steps:
       - name: Set up Homebrew
@@ -28,7 +31,6 @@ jobs:
       - name: Push commits
         uses: Homebrew/actions/git-try-push@main
         with:
-          token: ${{ github.token }}
           branch: main
 
       - name: Delete branch
