@@ -55,6 +55,13 @@ A simple TOTP CLI powered by keychain of macOS.
 brew install simnalamburt/x/totp
 ```
 
+### [Kopuz](https://kopuz.moe/)
+Fast, lightweight music player for everyday listening. Apple Silicon only.
+The upstream app is un-notarized; see the caveats printed on install.
+```bash
+brew install --cask simnalamburt/x/kopuz
+```
+
 &nbsp;
 
 Archives
